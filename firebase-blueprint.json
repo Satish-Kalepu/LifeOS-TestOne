@@ -1,0 +1,46 @@
+{
+  "entities": {
+    "User": {
+      "title": "User Profile",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string" },
+        "displayName": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "householdId": { "type": "string" }
+      }
+    },
+    "Log": {
+      "title": "Activity Log",
+      "properties": {
+        "type": { "type": "string" },
+        "content": { "type": "string" },
+        "metadata": { "type": "object" },
+        "timestamp": { "type": "number" }
+      }
+    },
+    "Memory": {
+      "title": "Semantic Memory",
+      "properties": {
+        "content": { "type": "string" },
+        "embedding": { "type": "array" },
+        "importance": { "type": "number" },
+        "tags": { "type": "array" }
+      }
+    },
+    "Task": {
+      "title": "Life Task",
+      "properties": {
+        "title": { "type": "string" },
+        "isCompleted": { "type": "boolean" },
+        "dueDate": { "type": "number" }
+      }
+    }
+  },
+  "firestore": {
+    "/users/{userId}": { "schema": "User", "description": "User profiles" },
+    "/users/{userId}/logs/{logId}": { "schema": "Log", "description": "Activity history" },
+    "/users/{userId}/memories/{memoryId}": { "schema": "Memory", "description": "AI memory nodes" },
+    "/users/{userId}/tasks/{taskId}": { "schema": "Task", "description": "To-dos and reminders" }
+  }
+}

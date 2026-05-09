@@ -1,0 +1,6 @@
+{
+  "name": "LifeOS - Personal AI Assistant",
+  "description": "An Android-first personal AI assistant for long-term life management, memory, and family coordination.",
+  "requestFramePermissions": ["camera", "microphone", "geolocation"],
+  "majorCapabilities": ["AI Chat", "Memory Retrieval", "Task Management", "Family Sharing"]
+}
